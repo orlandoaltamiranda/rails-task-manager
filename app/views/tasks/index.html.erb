@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    <% @tasks.each do |element| %>
+      <li>ID = <%=link_to("Visitar elemento", task_path(element.id))  %> (<%= element.id %>) >>> <%= element.title %> <%= element.completed %></li>
+    <% end %>
+  </ul>
+  <div class="card">
+    <%= link_to("Crear nuevo elemento", tasks_new_path) %>
+  </div>
+</div>
